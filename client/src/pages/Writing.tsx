@@ -1,8 +1,8 @@
 /*
  * Writing: Quiet Studio — Wabi-Sabi Minimalism
+ * Cormorant Garamond headings, Nunito Sans body.
  * Article list with staggered fade-in animation.
  * Each article has a small sequence number, date in light gray, and title.
- * Tags shown as subtle labels.
  */
 
 import { motion } from "framer-motion";
@@ -58,7 +58,7 @@ function formatDate(dateStr: string): string {
 export default function Writing() {
   return (
     <section className="pt-16 sm:pt-24">
-      <h1 className="font-serif text-3xl sm:text-4xl tracking-tight mb-12 text-foreground">
+      <h1 className="font-serif text-4xl sm:text-5xl tracking-tight mb-14 text-foreground">
         Writing
       </h1>
 
@@ -73,25 +73,25 @@ export default function Writing() {
               delay: index * 0.08,
               ease: "easeOut",
             }}
-            className="group py-7 border-b border-border/40 first:pt-0 last:border-b-0 cursor-pointer"
+            className="group py-7 border-b border-border/30 first:pt-0 last:border-b-0 cursor-pointer"
           >
             <div className="flex items-baseline gap-4 mb-2">
-              <span className="text-xs text-muted-foreground/50 font-mono tabular-nums select-none shrink-0">
+              <span className="text-[13px] text-muted-foreground/40 font-mono tabular-nums select-none shrink-0">
                 {String(article.id).padStart(2, "0")}
               </span>
               <div className="flex-1">
-                <h2 className="font-serif text-xl sm:text-[22px] text-foreground group-hover:text-primary transition-colors duration-200 leading-snug">
+                <h2 className="font-serif text-[22px] sm:text-2xl text-foreground group-hover:text-primary transition-colors duration-200 leading-snug">
                   {article.title}
                 </h2>
               </div>
             </div>
 
-            <div className="ml-[calc(1rem+16px)] sm:ml-[calc(1.25rem+16px)]">
-              <p className="text-foreground/60 text-[15px] leading-relaxed mb-3 max-w-lg">
+            <div className="ml-[calc(1.1rem+16px)] sm:ml-[calc(1.3rem+16px)]">
+              <p className="text-foreground/55 text-[15px] leading-relaxed mb-3 max-w-lg">
                 {article.description}
               </p>
 
-              <div className="flex items-center gap-3 text-xs text-muted-foreground/60">
+              <div className="flex items-center gap-3 text-[13px] text-muted-foreground/50">
                 <time dateTime={article.date}>{formatDate(article.date)}</time>
                 <span className="select-none">·</span>
                 <span>{article.readingTime}</span>
@@ -100,7 +100,7 @@ export default function Writing() {
                     <span className="select-none">·</span>
                     <div className="flex gap-2">
                       {article.tags.map((tag) => (
-                        <span key={tag} className="text-muted-foreground/50">
+                        <span key={tag} className="text-muted-foreground/40">
                           {tag}
                         </span>
                       ))}
@@ -114,7 +114,7 @@ export default function Writing() {
       </div>
 
       {/* Quiet note at the bottom */}
-      <div className="mt-16 text-sm text-muted-foreground/40 italic">
+      <div className="mt-16 text-sm text-muted-foreground/35 italic font-serif">
         More to come.
       </div>
     </section>

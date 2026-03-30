@@ -1,8 +1,7 @@
 /*
  * Layout: Quiet Studio — Wabi-Sabi Minimalism
- * Left-aligned asymmetric layout with generous whitespace.
- * Navigation is minimal: name + two links.
- * Content breathes on the left, right side stays open.
+ * Cormorant Garamond + Nunito Sans typography.
+ * Left-aligned asymmetric layout. Navigation: name + Writing.
  */
 
 import { Link, useLocation } from "wouter";
@@ -23,22 +22,11 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-2xl mx-auto px-6 sm:px-8 lg:ml-[12%] lg:mr-auto lg:px-0">
           <nav className="flex items-baseline gap-8">
             <Link href="/">
-              <span className="font-serif text-xl tracking-tight text-foreground hover:opacity-70 transition-opacity duration-200">
+              <span className="font-serif text-[22px] tracking-tight text-foreground hover:opacity-70 transition-opacity duration-200">
                 Qian Lin
               </span>
             </Link>
             <div className="flex items-baseline gap-6 text-[15px]">
-              <Link href="/about">
-                <span
-                  className={`transition-colors duration-200 ${
-                    location === "/about"
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  About
-                </span>
-              </Link>
               <Link href="/writing">
                 <span
                   className={`transition-colors duration-200 ${
