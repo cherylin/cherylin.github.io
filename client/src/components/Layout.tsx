@@ -1,12 +1,16 @@
 /*
  * Layout: Quiet Studio — Wabi-Sabi Minimalism
- * Cormorant Garamond + Nunito Sans typography.
- * Left-aligned asymmetric layout. Navigation: name + Writing.
+ * Lora + Nunito Sans typography.
+ * Left-aligned asymmetric layout.
+ * Header: name + Writing + dark/light toggle + EN/中 toggle.
  */
 
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { type ReactNode } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
+import { useLang } from "@/contexts/LanguageContext";
+import { Moon, Sun } from "lucide-react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -14,30 +18,65 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const [location] = useLocation();
+  const { theme, toggleTheme } = useTheme();
+  const { lang, toggleLang } = useLang();
 
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header / Navigation */}
       <header className="pt-10 pb-6 sm:pt-14 sm:pb-8">
         <div className="max-w-2xl mx-auto px-6 sm:px-8 lg:ml-[12%] lg:mr-auto lg:px-0">
-          <nav className="flex items-baseline gap-8">
-            <Link href="/">
-              <span className="font-serif text-[22px] tracking-tight text-foreground hover:opacity-70 transition-opacity duration-200">
-                Qian Lin
-              </span>
-            </Link>
-            <div className="flex items-baseline gap-6 text-[15px]">
-              <Link href="/writing">
-                <span
-                  className={`transition-colors duration-200 ${
-                    location === "/writing"
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  Writing
+          <nav className="flex items-center justify-between">
+            {/* Left: name + nav */}
+            <div className="flex items-baseline gap-8">
+              <Link href="/">
+                <span className="font-serif text-[22px] tracking-tight text-foreground hover:opacity-70 transition-opacity duration-200">
+                  Qian Lin
                 </span>
               </Link>
+              <div className="flex items-baseline gap-6 text-[15px]">
+                <Link href="/writing">
+                  <span
+                    className={`transition-colors duration-200 ${
+                      location === "/writing"
+                        ? "text-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {lang === "en" ? "Writing" : "文章"}
+                  </span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: toggles */}
+            <div className="flex items-center gap-1">
+              {/* Language toggle */}
+              <button
+                onClick={toggleLang}
+                className="p-2 text-[13px] text-muted-foreground hover:text-foreground transition-colors duration-200 select-none"
+                aria-label="Toggle language"
+                title={lang === "en" ? "切换到中文" : "Switch to English"}
+              >
+                {lang === "en" ? "中" : "EN"}
+              </button>
+
+              {/* Divider */}
+              <span className="text-border select-none text-[13px]">/</span>
+
+              {/* Theme toggle */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
+                aria-label="Toggle theme"
+                title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+              >
+                {theme === "light" ? (
+                  <Moon size={16} strokeWidth={1.5} />
+                ) : (
+                  <Sun size={16} strokeWidth={1.5} />
+                )}
+              </button>
             </div>
           </nav>
         </div>
@@ -60,7 +99,7 @@ export default function Layout({ children }: LayoutProps) {
         </div>
       </main>
 
-      {/* Footer — minimal, just a dot */}
+      {/* Footer — minimal */}
       <footer className="pb-10">
         <div className="max-w-2xl mx-auto px-6 sm:px-8 lg:ml-[12%] lg:mr-auto lg:px-0">
           <div className="text-center lg:text-left">

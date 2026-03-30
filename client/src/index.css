@@ -44,6 +44,7 @@
   --font-sans: 'Nunito Sans', system-ui, sans-serif;
 }
 
+/* Light mode — warm parchment */
 :root {
   --radius: 0.5rem;
   --background: oklch(0.975 0.005 80);
@@ -80,6 +81,42 @@
   --chart-5: oklch(0.75 0.03 250);
 }
 
+/* Dark mode — warm charcoal, not pure black */
+.dark {
+  --background: oklch(0.18 0.008 60);
+  --foreground: oklch(0.88 0.008 70);
+  --card: oklch(0.18 0.008 60);
+  --card-foreground: oklch(0.88 0.008 70);
+  --popover: oklch(0.22 0.008 60);
+  --popover-foreground: oklch(0.88 0.008 70);
+  --primary: oklch(0.65 0.04 250);
+  --primary-foreground: oklch(0.18 0.008 60);
+  --secondary: oklch(0.24 0.008 60);
+  --secondary-foreground: oklch(0.78 0.008 70);
+  --muted: oklch(0.24 0.008 60);
+  --muted-foreground: oklch(0.58 0.01 70);
+  --accent: oklch(0.24 0.008 60);
+  --accent-foreground: oklch(0.88 0.008 70);
+  --destructive: oklch(0.65 0.2 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.28 0.008 60);
+  --input: oklch(0.28 0.008 60);
+  --ring: oklch(0.65 0.04 250);
+  --sidebar: oklch(0.18 0.008 60);
+  --sidebar-foreground: oklch(0.88 0.008 70);
+  --sidebar-primary: oklch(0.65 0.04 250);
+  --sidebar-primary-foreground: oklch(0.18 0.008 60);
+  --sidebar-accent: oklch(0.24 0.008 60);
+  --sidebar-accent-foreground: oklch(0.88 0.008 70);
+  --sidebar-border: oklch(0.28 0.008 60);
+  --sidebar-ring: oklch(0.65 0.04 250);
+  --chart-1: oklch(0.65 0.04 250);
+  --chart-2: oklch(0.55 0.04 250);
+  --chart-3: oklch(0.45 0.04 250);
+  --chart-4: oklch(0.75 0.04 250);
+  --chart-5: oklch(0.35 0.04 250);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -92,6 +129,7 @@
     letter-spacing: 0.01em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -111,6 +149,9 @@
   }
   ::selection {
     background-color: oklch(0.45 0.03 250 / 0.12);
+  }
+  .dark ::selection {
+    background-color: oklch(0.65 0.04 250 / 0.2);
   }
 }
 
@@ -165,5 +206,16 @@
   }
   .wabi-link:hover {
     color: oklch(0.35 0.03 250);
+  }
+
+  /* Dark mode wabi-link */
+  .dark .wabi-link {
+    color: oklch(0.65 0.04 250);
+  }
+  .dark .wabi-link::after {
+    background-color: oklch(0.65 0.04 250);
+  }
+  .dark .wabi-link:hover {
+    color: oklch(0.75 0.04 250);
   }
 }
