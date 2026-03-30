@@ -113,10 +113,7 @@ export default function Writing() {
         ))}
       </div>
 
-      {/* Quiet note at the bottom */}
-      <div className="mt-16 text-sm text-muted-foreground/35 italic font-serif">
-        More to come.
-      </div>
+
     </section>
   );
 }
