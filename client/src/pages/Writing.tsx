@@ -2,14 +2,15 @@
  * Writing: Quiet Studio — Wabi-Sabi Minimalism
  * Lora headings, Nunito Sans body.
  * Bilingual article list with staggered fade-in.
- * Flower watermarks on article numbers for AI Learning entries.
+ * Flower watermarks to the right of article titles for AI Learning entries.
  */
 
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { useLang } from "@/contexts/LanguageContext";
 
 interface Article {
-  id: number;
+  id: string; // slug for URL
   title: { en: string; zh: string };
   date: string;
   description: { en: string; zh: string };
@@ -26,53 +27,14 @@ const flowers = {
   peony: "https://d2xsxph8kpxj0f.cloudfront.net/310519663294044581/KKpm3KDDGaNM8qmzDvNVv4/flower-peony-LwuWTt4MFo2grrMdh6cBoi.webp",
   waterlily: "https://d2xsxph8kpxj0f.cloudfront.net/310519663294044581/KKpm3KDDGaNM8qmzDvNVv4/flower-waterlily-9uGePMbWASGmeJY5qFXYt4.webp",
   camellia: "https://d2xsxph8kpxj0f.cloudfront.net/310519663294044581/KKpm3KDDGaNM8qmzDvNVv4/flower-camellia-iwwq52pihquRpX4UmWV3Ui.webp",
+  rose: "https://d2xsxph8kpxj0f.cloudfront.net/310519663294044581/KKpm3KDDGaNM8qmzDvNVv4/flower-rose-v2-JgACboLMySyMMoJsk5L3wL.webp",
+  lilyvalley: "https://d2xsxph8kpxj0f.cloudfront.net/310519663294044581/KKpm3KDDGaNM8qmzDvNVv4/flower-lilyvalley-v2-UePbMqyz7CrNzoxeLKz9zm.webp",
+  hydrangea: "https://d2xsxph8kpxj0f.cloudfront.net/310519663294044581/KKpm3KDDGaNM8qmzDvNVv4/flower-hydrangea-v2-8Kt9kpJU5TpfEn3QWSooKx.webp",
 };
 
 const articles: Article[] = [
   {
-    id: 1,
-    title: {
-      en: "Knowledge Base Is Not Memory",
-      zh: "知识库不是记忆",
-    },
-    date: "2026-03-28",
-    description: {
-      en: "Why every AI memory product is solving the wrong problem, and what a true memory system should look like.",
-      zh: "为什么所有 AI 记忆产品都在解决错误的问题，以及一个真正的记忆系统应该是什么样的。",
-    },
-    tags: ["memory", "AI"],
-    readingTime: { en: "25 min", zh: "25 分钟" },
-  },
-  {
-    id: 2,
-    title: {
-      en: "The Representation Problem",
-      zh: "知识表达问题",
-    },
-    date: "2026-03-15",
-    description: {
-      en: "Why triples are not enough for organizational knowledge, and what comes after the knowledge graph.",
-      zh: "为什么三元组不足以表达组织知识，以及知识图谱之后是什么。",
-    },
-    tags: ["knowledge graphs", "representation"],
-    readingTime: { en: "18 min", zh: "18 分钟" },
-  },
-  {
-    id: 3,
-    title: {
-      en: "Impressionist Memory",
-      zh: "印象派记忆",
-    },
-    date: "2026-02-20",
-    description: {
-      en: "How humans remember movies and why AI can't — on the challenge of modeling fuzzy, cross-modal associations.",
-      zh: "人类如何记住一部电影，而 AI 为什么不能——关于模糊的、跨模态关联的建模挑战。",
-    },
-    tags: ["memory", "multimodal"],
-    readingTime: { en: "22 min", zh: "22 分钟" },
-  },
-  {
-    id: 4,
+    id: "stop-pua-ing-your-ai",
     title: {
       en: "Stop PUA-ing Your AI",
       zh: "别再 PUA 你的 AI 了",
@@ -87,7 +49,7 @@ const articles: Article[] = [
     flower: flowers.lavender,
   },
   {
-    id: 5,
+    id: "html-is-the-new-powerpoint",
     title: {
       en: "HTML Is the New PowerPoint",
       zh: "HTML 是新时代的 PPT",
@@ -102,7 +64,7 @@ const articles: Article[] = [
     flower: flowers.sakura,
   },
   {
-    id: 6,
+    id: "the-jevons-paradox-of-ideas",
     title: {
       en: "The Jevons Paradox of Ideas",
       zh: "想法的杰文斯悖论",
@@ -117,6 +79,10 @@ const articles: Article[] = [
     flower: flowers.peony,
   },
 ];
+
+// Export articles so detail page can access them
+export { articles, flowers };
+export type { Article };
 
 function formatDate(dateStr: string, lang: "en" | "zh"): string {
   const date = new Date(dateStr + "T00:00:00");
@@ -154,60 +120,65 @@ export default function Writing() {
               delay: index * 0.08,
               ease: "easeOut",
             }}
-            className="group py-7 border-b border-border/30 first:pt-0 last:border-b-0 cursor-pointer"
+            className="group py-7 border-b border-border/30 first:pt-0 last:border-b-0"
           >
-            <div className="flex items-baseline gap-4 mb-2">
-              {/* Number area with optional flower watermark */}
-              <span className="relative text-[13px] text-muted-foreground/40 font-mono tabular-nums select-none shrink-0">
-                {article.flower && (
-                  <img
-                    src={article.flower}
-                    alt=""
-                    className="absolute -top-3 -left-2 w-10 h-10 opacity-30 pointer-events-none"
-                    style={{ filter: "saturate(0.7)" }}
-                  />
-                )}
-                {String(article.id).padStart(2, "0")}
-              </span>
-              <div className="flex-1">
-                <h2 className="font-serif text-[22px] sm:text-2xl text-foreground group-hover:text-primary transition-colors duration-200 leading-snug">
-                  {article.title[lang]}
-                </h2>
-              </div>
-            </div>
+            <Link href={`/writing/${article.id}`}>
+              <div className="cursor-pointer">
+                <div className="flex items-baseline gap-4 mb-2">
+                  {/* Number */}
+                  <span className="text-[13px] text-muted-foreground/40 font-mono tabular-nums select-none shrink-0">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className="flex-1">
+                    {/* Title with flower to the right */}
+                    <h2 className="relative inline font-serif text-[22px] sm:text-2xl text-foreground group-hover:text-primary transition-colors duration-200 leading-snug">
+                      {article.title[lang]}
+                      {article.flower && (
+                        <img
+                          src={article.flower}
+                          alt=""
+                          className="inline-block w-7 h-7 ml-2 -mt-1 opacity-40 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none"
+                          style={{ filter: "saturate(0.8)" }}
+                        />
+                      )}
+                    </h2>
+                  </div>
+                </div>
 
-            <div className="ml-[calc(1.1rem+16px)] sm:ml-[calc(1.3rem+16px)]">
-              <p className="text-foreground/55 text-[15px] leading-relaxed mb-3 max-w-lg">
-                {article.description[lang]}
-              </p>
+                <div className="ml-[calc(1.1rem+16px)] sm:ml-[calc(1.3rem+16px)]">
+                  <p className="text-foreground/55 text-[15px] leading-relaxed mb-3 max-w-lg">
+                    {article.description[lang]}
+                  </p>
 
-              <div className="flex items-center gap-3 text-[13px] text-muted-foreground/50 flex-wrap">
-                <time dateTime={article.date}>
-                  {formatDate(article.date, lang)}
-                </time>
-                <span className="select-none">·</span>
-                <span>{article.readingTime[lang]}</span>
-                {article.tags.length > 0 && (
-                  <>
+                  <div className="flex items-center gap-3 text-[13px] text-muted-foreground/50 flex-wrap">
+                    <time dateTime={article.date}>
+                      {formatDate(article.date, lang)}
+                    </time>
                     <span className="select-none">·</span>
-                    <div className="flex gap-2">
-                      {article.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className={
-                            tag === "AI learning"
-                              ? "text-[oklch(0.55_0.12_290)] dark:text-[oklch(0.72_0.12_290)]"
-                              : "text-muted-foreground/40"
-                          }
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </>
-                )}
+                    <span>{article.readingTime[lang]}</span>
+                    {article.tags.length > 0 && (
+                      <>
+                        <span className="select-none">·</span>
+                        <div className="flex gap-2">
+                          {article.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className={
+                                tag === "AI learning"
+                                  ? "text-[oklch(0.55_0.12_290)] dark:text-[oklch(0.72_0.12_290)]"
+                                  : "text-muted-foreground/40"
+                              }
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
+            </Link>
           </motion.article>
         ))}
       </div>

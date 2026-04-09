@@ -1,7 +1,7 @@
 /*
  * Layout: Quiet Studio — Wabi-Sabi Minimalism
  * Lora + Nunito Sans typography.
- * Left-aligned asymmetric layout.
+ * Centered layout for web, responsive for mobile.
  * Header: name + Writing + dark/light toggle + EN/中 toggle.
  */
 
@@ -25,7 +25,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className="min-h-screen flex flex-col">
       {/* Header / Navigation */}
       <header className="pt-10 pb-6 sm:pt-14 sm:pb-8">
-        <div className="max-w-2xl mx-auto px-6 sm:px-8 lg:ml-[12%] lg:mr-auto lg:px-0">
+        <div className="max-w-2xl mx-auto px-6 sm:px-8">
           <nav className="flex items-center justify-between">
             {/* Left: name + nav */}
             <div className="flex items-baseline gap-8">
@@ -38,7 +38,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Link href="/writing">
                   <span
                     className={`transition-colors duration-200 ${
-                      location === "/writing"
+                      location.startsWith("/writing")
                         ? "text-foreground"
                         : "text-muted-foreground hover:text-foreground"
                     }`}
@@ -84,7 +84,7 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Main Content */}
       <main className="flex-1 pb-20">
-        <div className="max-w-2xl mx-auto px-6 sm:px-8 lg:ml-[12%] lg:mr-auto lg:px-0">
+        <div className="max-w-2xl mx-auto px-6 sm:px-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={location}
@@ -101,8 +101,8 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Footer — minimal */}
       <footer className="pb-10">
-        <div className="max-w-2xl mx-auto px-6 sm:px-8 lg:ml-[12%] lg:mr-auto lg:px-0">
-          <div className="text-center lg:text-left">
+        <div className="max-w-2xl mx-auto px-6 sm:px-8">
+          <div className="text-center">
             <span className="text-muted-foreground/40 text-xs select-none">·</span>
           </div>
         </div>
