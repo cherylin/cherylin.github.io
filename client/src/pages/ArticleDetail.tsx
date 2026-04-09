@@ -178,11 +178,15 @@ export default function ArticleDetail() {
         <h1 className="font-serif text-3xl sm:text-4xl tracking-tight text-foreground leading-tight mb-4">
           {article.title[lang]}
           {article.flower && (
-            <img
+            <motion.img
               src={article.flower}
               alt=""
               className="inline-block w-8 h-8 sm:w-10 sm:h-10 ml-3 -mt-1 opacity-50"
               style={{ filter: "saturate(0.8)" }}
+              whileHover={{
+                y: [0, -3, 0, -2, 0],
+                transition: { duration: 0.8, ease: "easeInOut", repeat: Infinity }
+              }}
             />
           )}
         </h1>

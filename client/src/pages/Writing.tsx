@@ -134,11 +134,15 @@ export default function Writing() {
                     <h2 className="relative inline font-serif text-[22px] sm:text-2xl text-foreground group-hover:text-primary transition-colors duration-200 leading-snug">
                       {article.title[lang]}
                       {article.flower && (
-                        <img
+                        <motion.img
                           src={article.flower}
                           alt=""
-                          className="inline-block w-7 h-7 ml-2 -mt-1 opacity-40 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none"
+                          className="inline-block w-7 h-7 ml-2 -mt-1 opacity-40 group-hover:opacity-70 transition-opacity duration-300"
                           style={{ filter: "saturate(0.8)" }}
+                          whileHover={{
+                            y: [0, -3, 0, -2, 0],
+                            transition: { duration: 0.8, ease: "easeInOut", repeat: Infinity }
+                          }}
                         />
                       )}
                     </h2>
