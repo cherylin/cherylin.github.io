@@ -31,7 +31,7 @@ export default function Layout({ children }: LayoutProps) {
             <div className="flex items-baseline gap-8">
               <Link href="/">
                 <span className="font-serif text-[22px] tracking-tight text-foreground hover:opacity-70 transition-opacity duration-200">
-                  Qian Lin
+                  {lang === "en" ? "Qian Lin" : "林倩"}
                 </span>
               </Link>
               <div className="flex items-baseline gap-6 text-[15px]">
