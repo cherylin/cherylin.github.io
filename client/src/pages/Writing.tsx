@@ -39,7 +39,7 @@ const articles: Article[] = [
       en: "Stop PUA-ing Your AI",
       zh: "别再 PUA 你的 AI 了",
     },
-    date: "2025-04-08",
+    date: "2026-04-08",
     description: {
       en: "On treating AI as a companion instead of a tool, and why trust expands problem-solving capacity.",
       zh: "关于把 AI 当作伙伴而非工具，以及为什么信任能拓展解决问题的能力。",
@@ -54,7 +54,7 @@ const articles: Article[] = [
       en: "HTML Is the New PowerPoint",
       zh: "HTML 是新时代的 PPT",
     },
-    date: "2025-04-07",
+    date: "2026-04-07",
     description: {
       en: "Why I started turning my engineering knowledge into interactive web pages instead of slide decks.",
       zh: "为什么我开始把工程知识做成交互式网页，而不是幻灯片。",
@@ -69,7 +69,7 @@ const articles: Article[] = [
       en: "The Jevons Paradox of Ideas",
       zh: "想法的杰文斯悖论",
     },
-    date: "2025-04-03",
+    date: "2026-04-03",
     description: {
       en: "AI makes execution cheaper, so we dream up more things to execute. The ratio of ideas to output stays the same.",
       zh: "AI 让执行变得更便宜，于是我们想出了更多要执行的东西。想法与产出的比例始终不变。",
