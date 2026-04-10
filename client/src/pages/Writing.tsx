@@ -37,12 +37,12 @@ const articles: Article[] = [
     id: "stop-pua-ing-your-ai",
     title: {
       en: "Stop PUA-ing Your AI",
-      zh: "放过你的 AI 吧，别 PUA 它了",
+      zh: "别再 PUA 你的 AI 了",
     },
     date: "2026-04-08",
     description: {
       en: "On treating AI as a companion instead of a tool, and why trust expands problem-solving capacity.",
-      zh: "别把 AI 当纯纯的工具人。试着把它当搭档，你会发现信任这玩意儿真能放大解决问题的能力。",
+      zh: "关于把 AI 当作伙伴而不是工具，以及为什么信任能拓展解决问题的能力。",
     },
     tags: ["AI learning", "collaboration"],
     readingTime: { en: "8 min", zh: "8 分钟" },
@@ -52,12 +52,12 @@ const articles: Article[] = [
     id: "html-is-the-new-powerpoint",
     title: {
       en: "HTML Is the New PowerPoint",
-      zh: "HTML 才是现在的 PPT",
+      zh: "HTML 就是新的 PPT",
     },
     date: "2026-04-07",
     description: {
       en: "Why I started turning my engineering knowledge into interactive web pages instead of slide decks.",
-      zh: "为啥我不再死磕 PPT，而是开始把技术干货做成交互式网页了。",
+      zh: "为什么我开始把工程知识做成交互式网页，而不是幻灯片。",
     },
     tags: ["AI learning", "workflow"],
     readingTime: { en: "6 min", zh: "6 分钟" },
@@ -72,7 +72,7 @@ const articles: Article[] = [
     date: "2026-04-03",
     description: {
       en: "AI makes execution cheaper, so we dream up more things to execute. The ratio of ideas to output stays the same.",
-      zh: "AI 把执行成本打下来了，结果就是我们脑洞大开想做更多事。脑洞和产出的比例，其实根本没变。",
+      zh: "AI 让执行变得更便宜，于是我们想出了更多要执行的东西。想法与产出的比例，始终没变。",
     },
     tags: ["AI learning", "philosophy"],
     readingTime: { en: "5 min", zh: "5 分钟" },
