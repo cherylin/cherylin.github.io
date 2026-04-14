@@ -19,6 +19,80 @@ const articleContent: Record<
     zh: { paragraphs: string[]; quote?: string };
   }
 > = {
+  "shared-context-and-the-shape-of-future-work": {
+    en: {
+      paragraphs: [
+        "I recently read Evan Zhao's famous essay from last December, <em>Steam, Steel and Infinite Mind</em>. It is one of the most profound insights into the AI era I have come across. His analogy of \"Steel\" and \"Steam\" perfectly explains why we cannot just treat AI as a chat plugin stuffed into old organizational structures.",
+        "This got me thinking about a question that naturally extends from my previous thoughts on the Jevons Paradox: once this skyscraper is built, do we still need humans? Might future companies consist of just one person, or will we still have massive organizations? Will everyone be replaced?",
+        "At first glance, the AI shakeup we are seeing creates a linear illusion. If one person can do the work of a hundred, then surely the giant corporations of the future will shrink into micro-teams of a few dozen people. But if we step back from the short-term panic and look at the underlying logic of software engineering, human nature, and social capital, the answer is not an either-or. Instead, we might be heading toward an extreme bifurcation.",
+        "In the future business landscape, there might absolutely be true solo unicorns. But there might also be suffocatingly massive, 100,000-person interstellar conglomerates. Let me break this down from three dimensions.",
+        "First, the historical pattern of software engineering: the Jevons Paradox. When a technology becomes more efficient, the total consumption of the resource it uses does not decrease. It increases dramatically. Every time the level of abstraction has risen, from punch cards to assembly, to C++ and Python, coding efficiency multiplied by thousands. But programmers did not disappear. Software ate the world, and the developer workforce exploded.",
+        "When a <strong>shared context layer</strong> reduces the cost of daily alignment and development to zero, human ambition will not just stop. We will challenge complex systems we never dared to touch before. Think real-time digital twins of the global supply chain, personalized AGI healthcare networks, or even scheduling protocols for asteroid mining. The boundary of software engineering is simply the boundary of human imagination. One person might run a $10M SaaS product, but building civilization-level infrastructure might still require tens of thousands of people. Their roles will just shift from bricklayers to commanders.",
+        "Second, the base code of human nature: risk transfer and meaning containers. An organization is not just a compute network. It is a sociological invention designed to combat nihilism and share risk. When a highly efficient AI system causes a fatal bug, say an autonomous driving crash or a financial flash crash, who goes to jail? Who pays the $10 billion fine? Under our current legal and moral frameworks, AI cannot assume infinite liability. Only an organization can. The sheer size of massive companies is fundamentally a buffer against massive black swan risks.",
+        "Furthermore, humans are social animals. We crave belonging. We want to follow charismatic leaders and find identity in a shared vibe. A solo company made entirely of cold, calculating agents is extremely fragile in terms of long-term psychological resilience. A huge portion of the human workforce in future megacorps might not be there to produce code, but to provide emotional value, compliance buffering, and moral backstops.",
+        "Third, the gravity of sociology and capital: the ultimate hunting ground of M&amp;A. Capital inherently seeks monopoly and the elimination of uncertainty. With a shared context layer, we might see countless hyper-capable micro-companies of 3 to 5 people seizing market gaps with terrifying speed. But once they hit the ceiling of distribution channels, licensing, or global regulation, the giants will appear with their checkbooks.",
+        "Giants like Meta or Google might evolve to look more like giant VC funds combined with infrastructure providers. They might keep tens of thousands of employees not to write boilerplate code, but to execute dense capital M&amp;A, resource integration, and political maneuvering on a global scale.",
+        "However, even if a company grows to 100,000 people, it might not have a traditional hierarchy. Hierarchies exist because, in the old era, context could not be transmitted quickly across an organization. But with a unified shared context layer, a massive company does not need a hierarchical tree. Instead, it might operate as a federated organization, composed of countless small, highly autonomous groups gathered together. This is actually similar to the AI-native pod experiments many companies are already running today. It is a trend that is already underway.",
+        "The cost of execution is dropping to near zero. In the past, we worried about \"How.\" In the future, our only anxieties will be <strong>\"What\"</strong> and <strong>\"Why.\"</strong> And the beautiful thing about \"What\" and \"Why\" is that they contain infinite possibilities. There is infinite room for pursuit, and you can always redefine them.",
+      ],
+      quote: "The boundary of software engineering is the boundary of human imagination. The universe is vast, and human ambition will never outgrow it.",
+    },
+    zh: {
+      paragraphs: [
+        "最近我读了 Evan Zhao 去年十二月底的那篇著名博客《Steam, Steel and Infinite Mind》。这确实是对 AI 时代最深刻的洞察之一。他提出的“钢铁”和“蒸汽”的类比，完美解释了为什么我们不能只是把 AI 当作一个聊天插件塞进旧组织。",
+        "这让我延伸出一个问题，也跟我之前关于杰文斯悖论的思考一脉相承：当我们这个摩天大楼建成之后，难道我们真的不需要人吗？以后的公司规模会是一个人还是多个人？大家会被替代吗？",
+        "眼下这场以裁员为表象的 AI 洗牌，很容易让人产生一种线性的错觉：既然 1 个人能干 100 个人的活，那么未来的巨头公司肯定会缩水成几十个人的微型团队。但如果我们跳出短期的恐慌，从软件工程、人性本能和社会资本这三个底层逻辑来看，答案其实并非非此即彼，而是可能会走向一种极其极端的双轨制。",
+        "未来的商业版图里，既可能会有真正的“一人独角兽”，也可能会出现规模庞大到令人窒息的“十万人星际财团”。以下三个维度的拆解，当然只是一种畅想。",
+        "首先，软件工程的历史规律：杰文斯悖论。当一项技术的效率提升时，它对这种资源的总消耗量不仅不会减少，反而会急剧增加。回顾历史，从打孔卡片到汇编语言，再到 C++ 和 Python，每一次抽象层级的提升，都让写代码的效率翻了万倍。但这并没有让程序员消失，反而让软件吞噬了世界，催生了千万级的开发者大军。",
+        "当<strong>共享上下文层</strong>将日常的对齐和开发成本降为零时，人类的野心不会停滞。我们会去挑战过去根本不敢触碰的复杂度系统，比如实时的全球供应链数字孪生、个性化的强人工智能医疗系统，甚至是星际采矿的调度协议。软件工程的边界就是人类想象力的边界。1 个人或许能维持一个年入千万美金的产品，但要构建和维护那些极度复杂的文明级基础设施，可能依然需要上万人，只不过这上万人的性质从搬砖工变成了指挥官。",
+        "其次，人性的底层代码：风险转移与意义的容器。组织不仅是一个算力网络，它更是人类用来对抗虚无和分担风险的社会学发明。当一个拥有万倍效率的 AI 系统出了致命缺陷，比如导致了自动驾驶车祸，或者导致金融市场闪崩，谁来坐牢？谁来承担百亿美金的罚款？在现有的法律和道德框架下，AI 不能承担无限责任，只有组织可以。大公司的庞大体量，本质上是为了对抗极其巨大的黑天鹅风险。",
+        "而且，人类依然是社交动物。人们渴望追随有魅力的领导者，渴望在一个有归属感的场域里寻找身份认同。完全由冷冰冰的智能体组成的一人公司，在长期的精神韧性上是极度脆弱的。未来的大公司，很大一部分人力可能不再是为了产出代码，而是为了提供情绪价值、合规缓冲与道德兖底。",
+        "第三，社会学与资本的引力：并购的终极猎场。资本的本质是追求垄断和消除不确定性。在共享上下文层的加持下，市场上可能会出现无数由三五个人组成的、战斗力极强的超级微型公司。它们极度敏锐，能迅速抓住市场空隙。但当它们触碰到渠道、牌照或全球化监管的天花板时，巨头公司就会挥舞着资本的支票出现。",
+        "像 Meta 或谷歌这样的巨头，其内部形态可能会越来越像一个巨型风险投资基金加上基础设施提供商。巨头保留数万名员工，不是因为需要他们写基础代码，而是为了在全球范围内进行密集的资本并购、资源整合和政治博弈。",
+        "但是，哪怕未来的公司规模再大，我也不认为它会有传统的层级制度。层级制度的产生，是因为在旧时代里，上下文信息无法非常快地传导至公司各处。只要实现了统一的共享上下文，就算公司很大，也不需要一棵层级树。它需要的可能是一个个小团体，这些小团体最后聚集在一起，形成一个联邦式的组织。这其实跟现在很多公司正在进行的 AI 原生小组实验非常类似，这已经是一个正在发生的趋势。",
+        "执行的成本几乎为零。以前我们担心“怎么做”，未来我们唯一的焦虑将是<strong>“做什么”</strong>以及<strong>“为什么”</strong>。而“做什么”和“为什么”本身就有着无限种可能性，以及无限可以被追求的空间。你永远可以重新定义它们。",
+      ],
+      quote: "软件工程的边界就是人类想象力的边界。宇宙这么庞大，人的野心大不过宇宙。",
+    },
+  },
+  "architecture-can-grow-incrementally": {
+    en: {
+      paragraphs: [
+        "I have noticed a profound shift in my own thinking as I transition into becoming an AI-native engineer. And I want to be clear: this is not me bragging that I am already one. It is more that I am in the process, and the shift is real.",
+        "The difference is not about whether you know how to use Claude Code. We all know how to do that. In fact, I probably know fewer Claude Code tricks and skills than many others. The real gap is a mindset difference, particularly regarding how we think about the workflow itself and system architecture.",
+        "In the past, figuring out a new architecture meant doing a ton of research upfront. You had to gather massive amounts of system-level context, read the existing code, figure out the current state, and define exactly what the new feature required. Then you would reverse-engineer the new architecture, write a lengthy design doc, and sync with the entire team to get alignment.",
+        "But recently, while working on a side project, I felt a real friction with this old way of working. I no longer want to write long, tedious design docs. Instead, I want to spend that initial divergent phase, discussing architecture and reading source code, collaborating directly with my AI agent team.",
+        "For instance, I can set up different personas: a Red Team to poke holes, a Pragmatist to focus on shipping, and an Architect to design the structure. I let them do the investigation. Once that is done, as long as I have the code and existing documentation, the AI can come up with a highly solid plan.",
+        "Do I still need to spend days aligning with others? As long as I align on the angle and the desired product feature, and as long as I have enough architectural sense to judge whether the plan is good, especially at the prototype stage, I can just assign a linked agent team to execute a parallelized implementation. The whole process takes a fraction of the time. <strong>Architecture iteration can now be measured in hours, not days.</strong>",
+        "This creates an interesting clash when AI-native individuals collaborate with non-AI-native individuals in an enterprise. The friction is not about the tools. It is about fundamentally different mental models of the workflow. One side wants to write a doc, get it reviewed, have a meeting, and proceed step by step. The other side wants to spin up an agent team and ship a working prototype in a few hours. It might not be the absolute perfect architecture, and the taste might need refining later. But the feature works and the intent is achieved.",
+        "Now, I am basing this mostly on my recent experience building a full-stack platform, which is not a massive distributed system. I do not have deep confidence in saying this applies perfectly to maintaining massive distributed systems at scale. I know from past experience that designing distributed systems often relies heavily on an engineer's intuition. I am not entirely sure if that intuition has been fully captured and trained into large language models yet, as navigating across multiple repos in complex platforms is still quite challenging.",
+        "However, I do believe the agent ecosystem will continue to mature. So I lean toward the idea that even maintaining large distributed systems will become progressively easier.",
+        "More importantly, in system design, while it is difficult, the design patterns and tradeoff analyses are relatively stable and deterministic. When you compare two design options, you are generally evaluating a finite set of infrastructure metrics like availability, reliability, and latency. The required properties of a system are finite.",
+        "This is in stark contrast to user-facing products, where there are infinite possibilities. Writing UI is incredibly easy now, allowing for rapid iteration of those infinite possibilities. But architecture-wise, because the system design patterns are relatively fixed, it is highly likely they will be effectively trained into large language models.",
+        "Ultimately, the hardest part to define is the value judgment: the \"what\" and the \"why,\" not the \"how.\" Even if a distributed system is incredibly difficult to build, it is still just a problem in the domain of \"how.\" What truly matters is intent and evaluation.",
+        "If architecture can be rapidly iterated, does it still provide a deep moat? That is a \"we will see\" question for the coming months. But based on my observations, <strong>architecture can grow incrementally</strong>. You do not need massive amounts of upfront alignment. Incrementally modifying and evolving an architecture is not just possible. It is becoming the new default.",
+      ],
+      quote: "The hardest part to define is the value judgment: the \"what\" and the \"why,\" not the \"how.\" What truly matters is intent and evaluation.",
+    },
+    zh: {
+      paragraphs: [
+        "在向 AI 原生工程师转变的过程中，我发现自己的思维发生了一个非常深刻的转变。我并不是在自夸说我已经是了，而是说在这个转变的过程中，这种变化是真实的。",
+        "这个差异不在于大家会不会用 Claude Code，其实我们大家都会用。甚至可以说，我知道的 Claude Code 的技巧和用法可能都没有人家多。真正的差距在于思维方式的不同，特别是在合作和做项目的过程中，大家对于工作流程和系统架构的底层思维已经完全不同了。",
+        "以前，想要探索一个新的架构怎么做，通常需要先做大量的研究，收集很多系统层面的上下文。你要读代码，搞清楚目前的架构是什么样，我们需要的新功能是什么样，然后再反推新的架构该怎么设计。最后，把这些写成一个冗长的设计文档，并跟整个团队开会对齐。",
+        "但是最近在做个人项目的时候，我强烈意识到了这种新旧思维的碰撞。我不再希望去写冗长的文档，我更希望把前面这部分讨论架构、读原始代码的发散过程，都与 AI 和智能体团队一起进行。",
+        "比如说，我可以设置不同的角色：让一个做红队专门找茨，一个做务实派关注落地，一个做架构师负责设计。让他们帮我去做调研。做完之后，只要我有代码和现成的文档，AI 就可以直接给出一个非常好的方案。",
+        "那么，我还需要花几天时间跟别人对齐吗？只要我跟别人对齐了我的切入角度和想要达到的产品功能，只要我有一定的架构直觉能判断这个方案到底好不好，特别是在原型阶段，只要感觉差不多了，基本上就可以直接分配给一个关联的智能体团队进行并行实现。整个过程可能只需要一小会儿。也就是说，<strong>整个架构的迭代现在是可以以小时为单位进行的，而不再需要以前冗长的几天的周期。</strong>",
+        "但这样一来，在企业中，当 AI 原生思维的人与非 AI 原生思维的人进行合作时，就会出现摩擦。这种摩擦不在于工具本身，而在于对工作流程的底层思维完全不同。一方想要写文档、评审、开会、一步步来；另一方想要拉起一个智能体团队，几个小时内就交付一个可运行的原型。这也许不是最完美的架构，可能后面会觉得品味不够好需要改进，但它的功能是可用的，意图达到了。",
+        "当然，我这主要是根据我目前搭建一个全栈平台的工作感受来谈的。它并不是一个大型的分布式系统，所以我并没有很深的体会去断言，当发展到大型分布式系统阶段时，是否仍然不需要很多人一起去维护。我知道，正因为我以前做过分布式系统，很多这种设计方案其实来源于工程师自己的直觉。我不清楚这种直觉是否有被充分训练到大模型中，因为在跨代码仓库和处理更复杂的平台时，AI 还是有点吃力的。",
+        "但是未来，我觉得智能体的生态还是会越来越完善的。所以我倾向于认为，哪怕是维护大型分布式系统，这个事情也会变得越来越容易。",
+        "更重要的是，在系统设计这方面，虽然它比较难，但它的设计模式和权衡分析的方法论还是比较稳定和确定性的。比如分析两套设计方案，你大概率是根据可用性、可靠性、延迟这几块固定的基础设施指标去做衡量。系统需要的性质排列组合是比较有限的。",
+        "这跟做一个面向用户的产品完全不同。在面向用户的产品中，你有无限种可能性，而且现在写界面非常简单，所以每种可能性都可以迭代得非常快。但在架构层面，因为系统设计比较固定，它是很有可能会被有效地训练进大模型中的。",
+        "归根结底，最难定义的部分是价值判断——“做什么”和“为什么做”，而不是“如何做”。哪怕它是一个极难的分布式系统，它依然属于“如何做”的领域。真正重要的是意图和评估。",
+        "既然架构是可以被迅速迭代的，那么架构本身是否还有很深的护城河？这是一个需要在接下来的几个月内观察的问题。但是就我的感受而言，<strong>架构是可以慢慢长出来的</strong>，不需要在最初进行大量的对齐。增量地修改和迭代架构，不仅非常可行，而且这就是未来的默认模式。",
+      ],
+      quote: "最难定义的部分是价值判断——“做什么”和“为什么做”，而不是“如何做”。真正重要的是意图和评估。",
+    },
+  },
   "stop-pua-ing-your-ai": {
     en: {
       paragraphs: [
