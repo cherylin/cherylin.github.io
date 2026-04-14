@@ -188,11 +188,11 @@ export default function Writing() {
                     <time dateTime={article.date}>
                       {formatDate(article.date, lang)}
                     </time>
-                    <span className="select-none">\u00B7</span>
+                    <span className="select-none">·</span>
                     <span>{article.readingTime[lang]}</span>
                     {article.tags.length > 0 && (
                       <>
-                        <span className="select-none">\u00B7</span>
+                        <span className="select-none">·</span>
                         <div className="flex gap-2">
                           {article.tags.map((tag) => (
                             <span

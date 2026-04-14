@@ -22,7 +22,7 @@ const articleContent: Record<
   "shared-context-and-the-shape-of-future-work": {
     en: {
       paragraphs: [
-        "I recently read Evan Zhao's famous essay from last December, <em>Steam, Steel and Infinite Mind</em>. It is one of the most profound insights into the AI era I have come across. His analogy of \"Steel\" and \"Steam\" perfectly explains why we cannot just treat AI as a chat plugin stuffed into old organizational structures.",
+        "I recently read Evan Zhao's famous essay from last December, <a href=\"https://www.notion.com/blog/steam-steel-and-infinite-minds\" target=\"_blank\" rel=\"noopener noreferrer\"><em>Steam, Steel and Infinite Mind</em></a>. It is one of the most profound insights into the AI era I have come across. His analogy of \"Steel\" and \"Steam\" perfectly explains why we cannot just treat AI as a chat plugin stuffed into old organizational structures.",
         "This got me thinking about a question that naturally extends from my previous thoughts on the Jevons Paradox: once this skyscraper is built, do we still need humans? Might future companies consist of just one person, or will we still have massive organizations? Will everyone be replaced?",
         "At first glance, the AI shakeup we are seeing creates a linear illusion. If one person can do the work of a hundred, then surely the giant corporations of the future will shrink into micro-teams of a few dozen people. But if we step back from the short-term panic and look at the underlying logic of software engineering, human nature, and social capital, the answer is not an either-or. Instead, we might be heading toward an extreme bifurcation.",
         "In the future business landscape, there might absolutely be true solo unicorns. But there might also be suffocatingly massive, 100,000-person interstellar conglomerates. Let me break this down from three dimensions.",
@@ -39,7 +39,7 @@ const articleContent: Record<
     },
     zh: {
       paragraphs: [
-        "最近我读了 Evan Zhao 去年十二月底的那篇著名博客《Steam, Steel and Infinite Mind》。这确实是对 AI 时代最深刻的洞察之一。他提出的“钢铁”和“蒸汽”的类比，完美解释了为什么我们不能只是把 AI 当作一个聊天插件塞进旧组织。",
+        "最近我读了 Evan Zhao 去年十二月底的那篇著名博客<a href=\"https://www.notion.com/blog/steam-steel-and-infinite-minds\" target=\"_blank\" rel=\"noopener noreferrer\">《Steam, Steel and Infinite Mind》</a>。这确实是对 AI 时代最深刻的洞察之一。他提出的“钢铁”和“蒸汽”的类比，完美解释了为什么我们不能只是把 AI 当作一个聊天插件塞进旧组织。",
         "这让我延伸出一个问题，也跟我之前关于杰文斯悖论的思考一脉相承：当我们这个摩天大楼建成之后，难道我们真的不需要人吗？以后的公司规模会是一个人还是多个人？大家会被替代吗？",
         "眼下这场以裁员为表象的 AI 洗牌，很容易让人产生一种线性的错觉：既然 1 个人能干 100 个人的活，那么未来的巨头公司肯定会缩水成几十个人的微型团队。但如果我们跳出短期的恐慌，从软件工程、人性本能和社会资本这三个底层逻辑来看，答案其实并非非此即彼，而是可能会走向一种极其极端的双轨制。",
         "未来的商业版图里，既可能会有真正的“一人独角兽”，也可能会出现规模庞大到令人窒息的“十万人星际财团”。以下三个维度的拆解，当然只是一种畅想。",
