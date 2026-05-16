@@ -34,6 +34,21 @@ const flowers = {
 
 const articles: Article[] = [
   {
+    id: "agentic-engineering-failure-modes",
+    title: {
+      en: "Agentic Engineering: Failure Modes and the Road to Production",
+      zh: "Agentic Engineering 的 Failure Modes",
+    },
+    date: "2026-05-15",
+    description: {
+      en: "From prototype to production, context window limits, monkey patches, hallucinated frameworks, and why eval is the unit test of the AI era.",
+      zh: "\u4ECE\u539F\u578B\u5230\u751F\u4EA7\u7684\u6311\u6218\uFF1A\u4E0A\u4E0B\u6587\u7A97\u53E3\u7684\u9650\u5236\u3001AI \u7684\u77ED\u89C6\uFF0C\u4EE5\u53CA\u4E3A\u4EC0\u4E48 Eval \u662F AI \u65F6\u4EE3\u7684\u5355\u5143\u6D4B\u8BD5\u3002",
+    },
+    tags: ["AI learning", "engineering"],
+    readingTime: { en: "8 min", zh: "8 \u5206\u949F" },
+    flower: flowers.waterlily,
+  },
+  {
     id: "shared-context-and-the-shape-of-future-work",
     title: {
       en: "Shared Context and the Shape of Future Work",

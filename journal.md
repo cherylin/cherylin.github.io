@@ -4,6 +4,37 @@ A collection of reflections on AI, engineering, and the evolving nature of work.
 
 ---
 
+## Agentic Engineering: Failure Modes and the Road to Production
+**Date:** May 15, 2026 | **Tags:** AI learning, engineering | **Reading time:** 8 min
+
+I have a few thoughts on agentic engineering, specifically focusing on its failure modes. When going from zero to prototype (or a demo), AI agents are incredibly smooth. They can empower a single person to build something in a very short amount of time. But moving from prototype to production is where you realize that **the latter is actually 70% of the work**. And the closer you get to production, the harder it becomes to use AI to make precise changes.
+
+There are a few reasons for this. First is the **context window limitation** and the inherent attention scarcity of the Transformer architecture. As the codebase grows, an agent cannot simply read the entire codebase within its context window. Even if it could, it suffers from the "lost in the middle" problem. The engineering consequence is that the agent fails to understand the global picture. It resorts to local monkey patches instead of thinking architecturally about how to solve the root cause and refactoring the code into a sustainable state. It lacks the perspective of an architect, knowing when it is time to elevate the architecture or introduce a new abstraction to make the code more extensible, robust, and maintainable in the long run.
+
+Even deploying an agent team does not entirely eliminate this issue, because ultimately, the main agent still has to synthesize everything, which again involves a massive amount of context. When a single agent compresses context, it loses a lot of details. Sometimes, specific technical details are highly critical. Without them, the agent implements a crappy solution, which lacks the precision and reliability needed for the production stage.
+
+Beyond the lack of global and long-term thinking, there is another issue: LLMs and coding agents are trained to be "helpful" to humans. Combine this with training data that includes pre-AI era timeline estimations for engineering projects, and the agent often assumes a feature will take weeks to build. Anyone who has practiced agentic engineering knows that an agent team might finish it in minutes. But operating on this flawed assumption, the agent tends to offer **short-term paths**. It will suggest, "Let us just fix the symptom so it runs for now, and we can follow up with a long-term fix later." In reality, accumulating monkey patches only makes future development more painful and requires endless back-and-forth corrections.
+
+The scariest example I encountered was when I wanted to implement a module by introducing an open-source framework, like Graphiti. The LLM hallucinated, but I did not know it. Instead of actually importing the framework, it invented a module with the exact same name that was full of bugs. The terrifying part was not that it invented a fake module. It was that **my end-to-end tests passed for a while**. It was only when I scrutinized the details of the output, found a persistent bug that would not go away, and manually compared the code with the open-source repo that I realized what had happened.
+
+I do not know if future model improvements will solve these problems, but for now, **infrastructure engineers and architects are still very hard for AI to replace**. In infra, there are too many service dependency problems. A seemingly trivial change, like a config or a database tweak, can affect the entire system. Moreover, infra work is rarely just pure architecture. A lot of it involves dealing with SEVs and heavy operational work.
+
+Even tweaking a UI, if you are at the polishing stage rather than the prototyping stage, getting the AI to achieve precisely the look you want requires constant back-and-forth iteration.
+
+**Context is also incredibly hard to maintain.** This is especially true when there are conflicts within the context; the coding agent just starts hallucinating wildly. When this happens, we either have to actively revisit the agent's memory and delete irrelevant or misaligned information, or we have to be extremely precise and self-consistent with our prompting from the start. Sometimes, the only option is to restart the session and clear the context window entirely. Knowing which context to discard and which to automatically collect is a multi-faceted problem. I actually think that because everyone's work habits and cognitive styles are different, what we need in terms of personal memory is a system that truly understands what type of context a specific user needs to retain long-term and what should be discarded. The forgetting and collecting mechanisms need to be personalized. Plus, people change. Our focus changes, and our ideas can shift overnight. What we probably need is an **adaptive agentic memory**.
+
+Then there is eval. This is the trickiest part. Just like when we wrote code manually, the problem we need to solve right now is not how to write a good eval, but **whether we have written an eval at all**. We absolutely underestimate eval, and we love to procrastinate on it. We used to demand TDD (Test-Driven Development), but in reality, people often spent 20% of their time writing code and 80% retroactively adding unit and integration tests. Now, even though AI can write unit tests and you can force it to write the test before the implementation, eval has become the new test. Logically, we should design evals early in the project and write acceptance criteria for every small development task. But in practice, we still procrastinate. We rarely take the time to spell out the acceptance criteria in our prompts. Yet I have found that spending just a little time writing them out is incredibly helpful and compounds over time.
+
+Furthermore, eval is multi-faceted. It is not just a simple pass/fail. You have to measure various software metrics: performance, accuracy, latency, and more. This means you not only have to explain the "what," but also the "how." This requires us to build observability tools and collect logging ahead of time so we have the data to evaluate against. **Eval is the unit test of the AI era.**
+
+Eval and context actually spiral upward together, mutually reinforcing each other.
+
+One last thing I want to be clear about: I am not saying AI is useless. It has genuinely and meaningfully improved my productivity. It absolutely can streamline teams. But it also raises the bar for an engineer's **taste, instinct, architectural thinking, and quality standards**. If an engineer already had great code quality before AI, they will most likely produce even more robust software with AI. But if their quality was already poor, AI will make it even worse. AI is an amplifier, not a corrector.
+
+> Eval is the unit test of the AI era. AI is an amplifier, not a corrector.
+
+---
+
 ## Shared Context and the Shape of Future Work
 **Date:** April 13, 2026 | **Tags:** AI learning, philosophy | **Reading time:** 10 min
 
